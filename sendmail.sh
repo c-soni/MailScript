@@ -5,7 +5,7 @@ SUCCESS=SUCCESS
 # Replace with your build command (before the pipe '|').
 make |& tee logs.txt
 
-# Simple check for the word "Error" in the last 20 lines of output. This is used
+# Simple check for the word "Error" in the last 10 lines of output. This is used
 # to change the email subject if the build fails.
 LOGS=$(tail -n 10 logs.txt)
 if [[ $LOGS = *"Error"* ]]; then
